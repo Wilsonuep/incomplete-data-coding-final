@@ -1,0 +1,86 @@
+Initial GridSearchCV on more "classical" models:
+
+Fitting 5 folds for each of 2 candidates, totalling 10 fits
+
+LinearRegression
+  Best params: {'fit_intercept': True, 'positive': False}
+  Best CV MSE (price):  115727.3552
+  Best CV RMSE (price): 340.1872
+Fitting 5 folds for each of 48 candidates, totalling 240 fits
+
+RandomForest
+  Best params: {'max_depth': None, 'max_features': 'sqrt', 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 400}
+  Best CV MSE (price):  123715.9088
+  Best CV RMSE (price): 351.7327
+Fitting 5 folds for each of 32 candidates, totalling 160 fits
+
+GradientBoosting
+  Best params: {'learning_rate': 0.1, 'max_depth': 3, 'min_samples_leaf': 5, 'n_estimators': 400, 'subsample': 1.0}
+  Best CV MSE (price):  89615.4097
+  Best CV RMSE (price): 299.3583
+Fitting 5 folds for each of 48 candidates, totalling 240 fits
+
+GradientBoosting_log_target (log1p target)
+  Best params: {'regressor__learning_rate': 0.1, 'regressor__max_depth': 3, 'regressor__min_samples_leaf': 5, 'regressor__n_estimators': 400, 'regressor__subsample': 0.8}
+  Best CV MSE (price):  89967.7037
+  Best CV RMSE (price): 299.9462
+Fitting 5 folds for each of 12 candidates, totalling 60 fits
+
+KNN
+  Best params: {'n_neighbors': 10, 'p': 1, 'weights': 'distance'}
+  Best CV MSE (price):  139625.9873
+  Best CV RMSE (price): 373.6656
+Fitting 5 folds for each of 243 candidates, totalling 1215 fits
+
+Randomized search on XGB family models:
+
+Fitting 5 folds for each of 10 candidates, totalling 50 fits
+XGB
+  Best params: {'subsample': 0.9, 'min_child_weight': 5, 'max_depth': 6, 'learning_rate': 0.03, 'colsample_bytree': 1.0}
+  Best CV MSE (price):  78874.1276
+  Best CV RMSE (price): 280.8454
+Fitting 5 folds for each of 10 candidates, totalling 50 fits
+
+XGB_log_target (log1p target)
+  Best params: {'regressor__subsample': 0.9, 'regressor__min_child_weight': 5, 'regressor__max_depth': 6, 'regressor__learning_rate': 0.03, 'regressor__colsample_bytree': 1.0}
+  Best CV MSE (price):  79872.8795
+  Best CV RMSE (price): 282.6179
+Fitting 5 folds for each of 10 candidates, totalling 50 fits
+
+LightGBM
+  Best params: {'subsample': 0.9, 'num_leaves': 63, 'min_child_samples': 20, 'max_depth': 7, 'learning_rate': 0.05, 'colsample_bytree': 0.7}
+  Best CV MSE (price):  78311.9749
+  Best CV RMSE (price): 279.8428
+Fitting 5 folds for each of 10 candidates, totalling 50 fits
+
+LightGBM_log_target (log1p target)
+  Best params: {'regressor__subsample': 1.0, 'regressor__num_leaves': 63, 'regressor__min_child_samples': 50, 'regressor__max_depth': -1, 'regressor__learning_rate': 0.03, 'regressor__colsample_bytree': 0.9}
+  Best CV MSE (price):  79156.0376
+  Best CV RMSE (price): 281.3468
+
+GridSearch on range of params near the best random found models:
+
+Fitting 5 folds for each of 32 candidates, totalling 160 fits
+
+XGB
+  Best params: {'colsample_bytree': 1.0, 'learning_rate': 0.03, 'max_depth': 6, 'min_child_weight': 5, 'subsample': 0.8}
+  Best CV MSE (price):  78596.4812
+  Best CV RMSE (price): 280.3506
+Fitting 5 folds for each of 32 candidates, totalling 160 fits
+
+XGB_log_target (log1p target)
+  Best params: {'regressor__colsample_bytree': 0.9, 'regressor__learning_rate': 0.03, 'regressor__max_depth': 6, 'regressor__min_child_weight': 3, 'regressor__subsample': 0.8}
+  Best CV MSE (price):  79551.6582
+  Best CV RMSE (price): 282.0490
+Fitting 5 folds for each of 64 candidates, totalling 320 fits
+
+LightGBM
+  Best params: {'colsample_bytree': 0.7, 'learning_rate': 0.05, 'max_depth': 7, 'min_child_samples': 20, 'num_leaves': 63, 'subsample': 0.8}
+  Best CV MSE (price):  78311.9749
+  Best CV RMSE (price): 279.8428
+Fitting 5 folds for each of 64 candidates, totalling 320 fits
+
+LightGBM_log_target (log1p target)
+  Best params: {'regressor__colsample_bytree': 0.8, 'regressor__learning_rate': 0.03, 'regressor__max_depth': -1, 'regressor__min_child_samples': 30, 'regressor__num_leaves': 63, 'regressor__subsample': 0.9}
+  Best CV MSE (price):  78759.3451
+  Best CV RMSE (price): 280.6410
